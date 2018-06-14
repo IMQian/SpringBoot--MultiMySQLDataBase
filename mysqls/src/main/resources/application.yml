@@ -1,0 +1,25 @@
+server:
+  port: 8081
+spring:
+  primary:
+    datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/test01?useSSL=false
+      username: root
+      password: root
+
+  secondary:
+    datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/test02?useSSL=false
+      username: root
+      password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+       physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    show-sql: true
+    generate-ddl: true
+
+
